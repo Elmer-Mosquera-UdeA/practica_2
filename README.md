@@ -1,4 +1,4 @@
-Practica 2 Informatica
+# Practica 2 Informatica
 
 Esta es una actividad desarrollada por:
 
