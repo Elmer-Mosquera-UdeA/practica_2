@@ -18,11 +18,11 @@ add_executable(practica_2
 )
 
 include(GNUInstallDirs)
-install(TARGETS laboratorio_II
+install(TARGETS practica_2
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-target_include_directories(desafio_1 PRIVATE include)
+target_include_directories(practica_2 PRIVATE include)
 
 install(FILES README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
