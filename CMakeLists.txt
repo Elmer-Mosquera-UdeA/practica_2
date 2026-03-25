@@ -11,10 +11,10 @@ add_custom_target(Documentacion SOURCES
 
 add_executable(practica_2
   main.cpp
-  src/configuracion.h
-  src/enlase.h
-  src/ejersicio_2.cpp
-  src/ejersicio_4.cpp
+  include/configuracion.h
+  include/enlace.h
+  src/ejercicio_2.cpp
+  src/ejercicio_4.cpp
 )
 
 include(GNUInstallDirs)
@@ -22,5 +22,7 @@ install(TARGETS laboratorio_II
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+target_include_directories(desafio_1 PRIVATE include)
 
 install(FILES README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
