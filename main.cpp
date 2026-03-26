@@ -16,7 +16,7 @@ int main(){
     if (entrada == 2) {
         ejercicio_2();
     }
-    else if (entrada == 2) {
+    else if (entrada == 4) {
         ejercicio_4();
     }
     else {
