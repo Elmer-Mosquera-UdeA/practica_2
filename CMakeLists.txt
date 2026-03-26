@@ -16,6 +16,7 @@ add_executable(practica_2
   include/enlace.h
   src/ejercicio_2.cpp
   src/ejercicio_4.cpp
+  src/ejercicio_6.cpp
 )
 
 include(GNUInstallDirs)
