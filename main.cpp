@@ -8,7 +8,7 @@ using std::endl;
 
 int main(){
     // Creacion de switch para ejecutar ejercicios
-    int entrada = 0; // char puede ir desde 0 - 255 es suficiente en este caso
+    int entrada = 0;
 
     cout << "Ingrese una de las opciones (2 o 4) " << endl;
     cin >> entrada;
