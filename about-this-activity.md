@@ -65,4 +65,3 @@ git commit -m "Añadido ejercicio 6"
 
 1. Haz push de la rama
 2. Crea un pull request para mezclar con la rama principal
-3. Elimina la rama de remoto
