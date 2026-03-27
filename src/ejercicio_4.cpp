@@ -7,48 +7,30 @@ using std::cin;
 void ejercicio_4(){
     cout << "Un programa que reciba una cadena de caracteres numericos (arreglo de char), la convierta a un n´umero entero y retorne dicho numero." << endl;
     char entrada[12];
+    char snumeros[10];
+    bool esNumero;
     int longitud = 0;
-    char actual = 0;
+    char caracter  = 0;
     int salida = 0;
 
+    for (int i = 0; i < 10; ++i) {
+        snumeros[i] = '0' + i;
+    }
+
     cout << "Ingrese una cadena de carracteres cualquiera: " << endl;
+    cin.ignore();
     cin.getline(entrada, 100);
 
     while (entrada[longitud] != '\0') {
-        bool esNumero = true;
+        esNumero = false;
+        caracter = entrada[longitud];
         salida*=10;
-        if (entrada[longitud] == '0'){
-            salida+= 0;
-        }
-        else if (entrada[longitud] == '1'){
-            salida+= 1;
-        }
-        else if (entrada[longitud] == '2'){
-            salida+= 2;
-        }
-        else if (entrada[longitud] == '3'){
-            salida+= 3;
-        }
-        else if (entrada[longitud] == '4'){
-            salida+= 4;
-        }
-        else if (entrada[longitud] == '5'){
-            salida+= 5;
-        }
-        else if (entrada[longitud] == '6'){
-            salida+= 6;
-        }
-        else if (entrada[longitud] == '7'){
-            salida+= 7;
-        }
-        else if (entrada[longitud] == '8'){
-            salida+= 8;
-        }
-        else if (entrada[longitud] == '9'){
-            salida+= 9;
-        }
-        else {
-            esNumero = false;
+        for (int i = 0; i < 10; i++) {
+            if (caracter == snumeros[i]){
+                salida += i;
+                esNumero = true;
+                break;
+            }
         }
         if (!esNumero){
             cout << "Se detecto un caracter no valido (No se puede convertir)"<< endl;
