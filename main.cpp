@@ -23,10 +23,7 @@ int main(){
         ejercicio_6();
     }
     else if (entrada == 8) {
-        ejercicio_10();
-    }
-    else if (entrada == 10) {
-        ejercicio_10();
+        ejercicio_8();
     }
     else {
         cout << "La opcion seleccionada no esta entre las opciones validas" << endl;
