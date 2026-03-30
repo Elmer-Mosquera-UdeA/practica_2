@@ -19,6 +19,9 @@ int main(){
     else if (entrada == 4) {
         ejercicio_4();
     }
+    else if (entrada == 5) {
+        ejercicio_5();
+    }
     else if (entrada == 6) {
         ejercicio_6();
     }
