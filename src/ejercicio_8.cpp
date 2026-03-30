@@ -16,7 +16,7 @@ void ejercicio_8(){
 
 
     cout << "Ingrese una cadena de caracteres : " << endl;
-    //cin.ignore();
+    cin.ignore(1000, '\n');
     cin.getline(entrada, 50);
 
     while (entrada[longitud] != '\0') {
@@ -25,10 +25,19 @@ void ejercicio_8(){
         if (caracter >= '0' && caracter <= '9') {
             numeros[i_n] = caracter;
             i_n++;
-        } else {
+        } else if (caracter >= 97 && caracter <= 'z') {
             texto[i_t] = caracter;
             i_t++;
+
+        } else if (caracter >= 'A' && caracter <= 'Z') {
+            texto[i_t] = caracter;
+            i_t++;
+
+        } else {
+            longitud++;
+            continue;
         }
+
         longitud++;
     }
 
