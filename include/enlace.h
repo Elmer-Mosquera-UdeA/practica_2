@@ -2,6 +2,7 @@
 #define ENLACE_H
 
 void ejercicio_2();
+void ejercicio_3();
 void ejercicio_4();
 void ejercicio_5();
 void ejercicio_6();
