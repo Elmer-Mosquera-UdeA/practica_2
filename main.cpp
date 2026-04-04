@@ -43,6 +43,9 @@ int main(){
     else if (entrada == 11) {
         ejercicio_11();
     }
+    else if (entrada == 12) {
+        ejercicio_12();
+    }
     else {
         cout << "La opcion seleccionada no esta entre las opciones validas" << endl;
         cout << "Intente de nuevo" << endl;
