@@ -13,6 +13,8 @@ using std::endl;
  */
 
 void imprimirMatriz(int*, int, bool, int);
+void evaluarSiMatrizEsMagica(int*, int);
+
 
 void ejercicio_12() {
     int n;
@@ -42,6 +44,7 @@ void ejercicio_12() {
         }
     }
     imprimirMatriz(matriz, n, false, 0);
+    evaluarSiMatrizEsMagica(matriz, n);
 
     delete[] matriz;
 }
@@ -56,5 +59,42 @@ void imprimirMatriz(int* matriz, int n, bool verChar = false, int index = 0) {
         if ((i + 1) % n == 0) {
             cout << endl;
         }
+    }
+}
+
+void evaluarSiMatrizEsMagica(int* matriz, int n){
+    int sumaFila[n];
+    int sumaColumnas[n];
+    int sumaDiagonalMa = 0;
+    int sumaDiagonalMe = 0;
+
+    for (int i = 0; i < n; ++i) {
+        sumaFila[i] = 0;
+        sumaColumnas[i] = 0;
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            sumaFila[i] += matriz[i * n + j];
+            sumaColumnas[j] += matriz[i * n + j];
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        sumaDiagonalMa += matriz[i * n + i];
+        sumaDiagonalMe += matriz[i * n + (n - 1 - i)];
+    }
+
+    bool esMagico = true;
+    for (int i = 0; i < n; i++) {
+        if (sumaFila[i] != sumaColumnas[i] || sumaFila[i] != sumaDiagonalMa || sumaFila[i] != sumaDiagonalMe) {
+            esMagico = false;
+            break;
+        }
+    }
+
+    if (esMagico) {
+        cout << "\nLa matriz es un cuadrado magico\n";
+    } else {
+        cout << "\nLa matriz no es un cuadrado magico\n";
     }
 }
