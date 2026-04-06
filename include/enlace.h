@@ -13,5 +13,6 @@ void ejercicio_10();
 void ejercicio_11();
 void ejercicio_13();
 
+void ejercicio_12();
 
 #endif
