@@ -43,6 +43,8 @@ int main(){
     else if (entrada == 11) {
         ejercicio_11();
     }
+    else if (entrada == 13) {
+        ejercicio_13();
     else if (entrada == 12) {
         ejercicio_12();
     }
